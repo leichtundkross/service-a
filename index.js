@@ -1,7 +1,7 @@
 const express = require('express')
 const axios = require('axios').default
 const app = express()
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 3000
 
 app.get('/hello/:name', async (req, res) => {
   // TODO: this should point to service B

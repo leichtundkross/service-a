@@ -22,6 +22,6 @@ jobs:
       - uses: docker/build-push-action@v2
         with:
           push: true
-          tags: "koenighotze/service-a:${{ steps.tag_name.outputs.GIT_TAG }}"
+          tags: "andreasguenzel/service-a:${{ steps.tag_name.outputs.GIT_TAG }}"
           labels: |
             revision:${{ github.sha }}

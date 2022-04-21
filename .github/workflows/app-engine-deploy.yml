@@ -29,12 +29,3 @@ jobs:
 
       - name: Check that application is up
         run: curl "${{ steps.deploy.outputs.url }}/hello/test"
-
-      - name: Notify Slack
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_USERNAME: deploy-pipeline
-          SLACK_ICON_EMOJI: ":poop:"
-          SLACK_TITLE: "App deployed"
-          SLACK_MESSAGE: "Application deployed to ${{ steps.deploy.outputs.url }}"

@@ -1,16 +1,10 @@
 name: App Engine Deploy
 
-# TODO revert this
-#on:
-#  push:
-#    tags:
-#      - "v*"
-#  workflow_dispatch:
-
 on:
-    push:
-        branches: ["**"]
-    workflow_dispatch:  
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
 
 jobs:
     deploy:

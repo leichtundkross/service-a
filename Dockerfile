@@ -1,7 +1,7 @@
 FROM node:stretch-slim
 
 COPY package.json package-lock.json ./
-RUN npm1 ci
+RUN npm ci
 
 COPY index.js ./
 

@@ -1,6 +1,6 @@
 runtime: nodejs14
 instance_class: F1
-service: demo
+service: default
 
 automatic_scaling:
   target_cpu_utilization: 0.65

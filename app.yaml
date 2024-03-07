@@ -1,4 +1,7 @@
-runtime: nodejs20
+runtime: nodejs
+env: flex
+runtime_config:
+  operating_system: ubuntu22
 instance_class: F1
 service: default
 

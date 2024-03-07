@@ -7,7 +7,7 @@ app.get('/hello/:name', async (req, res) => {
   // TODO: this should point to service B
   const response = await axios.get('http://worldtimeapi.org/api/timezone/Europe/Berlin')
 
-  res.send(`Hello ${req.params.name}. The date is ${response.data.datetime}`)
+  res.send(`Szia ${req.params.name}. The date is ${response.data.datetime}`)
 })
 
 app.listen(port, () => {

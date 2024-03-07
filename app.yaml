@@ -1,7 +1,4 @@
-runtime: nodejs
-env: flex
-runtime_config:
-  operating_system: ubuntu22
+runtime: nodejs20
 instance_class: F1
 service: default
 
@@ -12,3 +9,4 @@ automatic_scaling:
   min_pending_latency: 30ms
   max_pending_latency: automatic
   max_concurrent_requests: 3
+

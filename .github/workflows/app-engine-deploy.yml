@@ -15,13 +15,13 @@ jobs:
 
       - name: Authenticate
         id: auth
-        uses: google-github-actions/auth@v1
+        uses: google-github-actions/auth@v2
         with:
           credentials_json: '${{ secrets.GCP_DEPLOY_SA_KEY }}'
 
       - name: Deploy to app engine
         id: deploy
-        uses: google-github-actions/deploy-appengine@v1
+        uses: google-github-actions/deploy-appengine@v2
         with:
           deliverables: app.yaml
 

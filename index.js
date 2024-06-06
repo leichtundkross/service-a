@@ -8,7 +8,7 @@ app.get('/hello/:name', async (req, res) => {
   const response = await axios.get('http://worldtimeapi.org/api/timezone/Europe/Berlin')
 
   const date = new Date(response.data.datetime);
-  res.send(`Hola! ${req.params.name}. The date is ${date}`)
+  res.send(`Merhaba! ${req.params.name}. The date is ${date}`)
 })
 
 app.listen(port, () => {

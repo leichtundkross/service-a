@@ -4,11 +4,9 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.get('/hello/:name', async (req, res) => {
-  // TODO: this should point to service B
-  const response = await axios.get('http://worldtimeapi.org/api/timezone/Europe/Berlin')
+  const response = await axios.get('https://timeapi.io/api/time/current/zone?timeZone=Europe%2FBerlin')
 
-  const date = new Date(response.data.datetime);
-  res.send(`Hola! ${req.params.name}. The date is ${date}`)
+  res.send(`Hola! ${req.params.name}. The date is ${response.data.dateTime}`)
 })
 
 app.listen(port, () => {

@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000
 app.get('/hello/:name', async (req, res) => {
   const response = await axios.get('https://timeapi.io/api/time/current/zone?timeZone=Europe%2FBerlin')
 
-  res.send(`Hola! ${req.params.name}. The date is ${response.data.dateTime}`)
+  res.send(`Hallo ${req.params.name}. The date is ${response.data.dateTime}`)
 })
 
 app.listen(port, () => {

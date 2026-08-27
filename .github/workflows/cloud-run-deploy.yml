@@ -36,7 +36,7 @@ jobs:
           service: service-a
           region: ${{ vars.GCP_REGION }}
           image: ${{ vars.GCP_REGION }}-docker.pkg.dev/${{ vars.GCP_PROJECT_ID }}/${{ vars.AR_REPO }}/service-a:${{ github.ref_name }}
-          flags: --allow-unauthenticated
+          flags: --allow-unauthenticated --min-instances=0 --max-instances=5
 
       - name: Check that application is up
         run: curl "${{ steps.deploy.outputs.url }}/hello/test"

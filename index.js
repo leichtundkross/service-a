@@ -9,6 +9,10 @@ app.get('/hello/:name', async (req, res) => {
   res.send(`Hola! ${req.params.name}. The date is ${response.data.dateTime}`)
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+  })
+}
+
+module.exports = app

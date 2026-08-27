@@ -98,3 +98,16 @@ Push a tag matching `v*` to trigger the workflow:
 git tag v1.0.0
 git push origin v1.0.0
 ```
+
+### 4. Stop it when not needed
+
+The service is public (`--allow-unauthenticated`), so when you're done with a
+session, delete it rather than leaving the endpoint reachable. It costs nothing
+while idle either way (scale-to-zero), but deleting closes the attack surface
+completely instead of just avoiding cost:
+
+```bash
+gcloud run services delete service-a --region="$REGION"
+```
+
+Redeploy any time by pushing a new `v*` tag — the workflow recreates it.

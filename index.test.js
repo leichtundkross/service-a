@@ -11,5 +11,5 @@ test('GET /hello/:name returns greeting with date from TimeAPI', async () => {
   const res = await request(app).get('/hello/World')
 
   expect(res.status).toBe(200)
-  expect(res.text).toBe('Hola! World. The date is 2026-08-27T12:00:00')
+  expect(res.text).toBe('Hallo! World. The date is 2026-08-27T12:00:00')
 })
